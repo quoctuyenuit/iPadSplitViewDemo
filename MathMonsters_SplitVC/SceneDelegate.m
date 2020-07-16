@@ -7,8 +7,10 @@
 //
 
 #import "SceneDelegate.h"
+#import "MonsterListViewController.h"
+#import "DetailViewController.h"
 
-@interface SceneDelegate ()
+@interface SceneDelegate () <UISplitViewControllerDelegate>
 
 @end
 
@@ -19,6 +21,28 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    UISplitViewController *splitViewController = [[UISplitViewController alloc] init];
+    
+    MonsterListViewController * monsterListVc   = [[MonsterListViewController alloc] init];
+    DetailViewController *      detailVc        = [[DetailViewController alloc] init];
+    
+    monsterListVc.delegate = detailVc;
+    
+    UINavigationController *masterNav = [[UINavigationController alloc] initWithRootViewController:monsterListVc];
+    UINavigationController *detailNav = [[UINavigationController alloc] initWithRootViewController:detailVc];
+    [masterNav setTitle:@"Monster List"];
+    
+    splitViewController.viewControllers = @[masterNav, detailNav];
+    splitViewController.delegate = self;
+    detailVc.navigationItem.leftItemsSupplementBackButton = true;
+    detailVc.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
+    
+    UIWindowScene * windowScene = (UIWindowScene *) scene;
+    _window                     = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    _window.rootViewController  = splitViewController;
+    [_window makeKeyAndVisible];
+    _window.windowScene = windowScene;
 }
 
 
@@ -54,5 +78,16 @@
     // to restore the scene back to its current state.
 }
 
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
+    
+    if ([secondaryViewController isKindOfClass:[UINavigationController class]] &&
+        [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[DetailViewController class]] &&
+        ([(DetailViewController *)[(UINavigationController *)secondaryViewController topViewController] monster] == nil)) {
+        // Return YES to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
 @end
