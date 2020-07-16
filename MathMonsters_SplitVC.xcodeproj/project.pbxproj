@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B07470DD24BFFC860057B839 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B07470DC24BFFC860057B839 /* AppDelegate.m */; };
+		B07470E024BFFC860057B839 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B07470DF24BFFC860057B839 /* SceneDelegate.m */; };
+		B07470E324BFFC860057B839 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B07470E224BFFC860057B839 /* ViewController.m */; };
+		B07470E624BFFC860057B839 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07470E424BFFC860057B839 /* Main.storyboard */; };
+		B07470E824BFFC870057B839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B07470E724BFFC870057B839 /* Assets.xcassets */; };
+		B07470EB24BFFC870057B839 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07470E924BFFC870057B839 /* LaunchScreen.storyboard */; };
+		B07470EE24BFFC870057B839 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B07470ED24BFFC870057B839 /* main.m */; };
+		B07470F824BFFC870057B839 /* MathMonsters_SplitVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B07470F724BFFC870057B839 /* MathMonsters_SplitVCTests.m */; };
+		B074710324BFFC870057B839 /* MathMonsters_SplitVCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B074710224BFFC870057B839 /* MathMonsters_SplitVCUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B07470F424BFFC870057B839 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B07470D024BFFC860057B839 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B07470D724BFFC860057B839;
+			remoteInfo = MathMonsters_SplitVC;
+		};
+		B07470FF24BFFC870057B839 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B07470D024BFFC860057B839 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B07470D724BFFC860057B839;
+			remoteInfo = MathMonsters_SplitVC;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B07470D824BFFC860057B839 /* MathMonsters_SplitVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMonsters_SplitVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07470DB24BFFC860057B839 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B07470DC24BFFC860057B839 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B07470DE24BFFC860057B839 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		B07470DF24BFFC860057B839 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		B07470E124BFFC860057B839 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B07470E224BFFC860057B839 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B07470E524BFFC860057B839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B07470E724BFFC870057B839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B07470EA24BFFC870057B839 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B07470EC24BFFC870057B839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B07470ED24BFFC870057B839 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B07470F324BFFC870057B839 /* MathMonsters_SplitVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathMonsters_SplitVCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07470F724BFFC870057B839 /* MathMonsters_SplitVCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathMonsters_SplitVCTests.m; sourceTree = "<group>"; };
+		B07470F924BFFC870057B839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B07470FE24BFFC870057B839 /* MathMonsters_SplitVCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathMonsters_SplitVCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B074710224BFFC870057B839 /* MathMonsters_SplitVCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathMonsters_SplitVCUITests.m; sourceTree = "<group>"; };
+		B074710424BFFC870057B839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B07470D524BFFC860057B839 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07470F024BFFC870057B839 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07470FB24BFFC870057B839 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B07470CF24BFFC860057B839 = {
+			isa = PBXGroup;
+			children = (
+				B07470DA24BFFC860057B839 /* MathMonsters_SplitVC */,
+				B07470F624BFFC870057B839 /* MathMonsters_SplitVCTests */,
+				B074710124BFFC870057B839 /* MathMonsters_SplitVCUITests */,
+				B07470D924BFFC860057B839 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B07470D924BFFC860057B839 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B07470D824BFFC860057B839 /* MathMonsters_SplitVC.app */,
+				B07470F324BFFC870057B839 /* MathMonsters_SplitVCTests.xctest */,
+				B07470FE24BFFC870057B839 /* MathMonsters_SplitVCUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B07470DA24BFFC860057B839 /* MathMonsters_SplitVC */ = {
+			isa = PBXGroup;
+			children = (
+				B07470DB24BFFC860057B839 /* AppDelegate.h */,
+				B07470DC24BFFC860057B839 /* AppDelegate.m */,
+				B07470DE24BFFC860057B839 /* SceneDelegate.h */,
+				B07470DF24BFFC860057B839 /* SceneDelegate.m */,
+				B07470E124BFFC860057B839 /* ViewController.h */,
+				B07470E224BFFC860057B839 /* ViewController.m */,
+				B07470E424BFFC860057B839 /* Main.storyboard */,
+				B07470E724BFFC870057B839 /* Assets.xcassets */,
+				B07470E924BFFC870057B839 /* LaunchScreen.storyboard */,
+				B07470EC24BFFC870057B839 /* Info.plist */,
+				B07470ED24BFFC870057B839 /* main.m */,
+			);
+			path = MathMonsters_SplitVC;
+			sourceTree = "<group>";
+		};
+		B07470F624BFFC870057B839 /* MathMonsters_SplitVCTests */ = {
+			isa = PBXGroup;
+			children = (
+				B07470F724BFFC870057B839 /* MathMonsters_SplitVCTests.m */,
+				B07470F924BFFC870057B839 /* Info.plist */,
+			);
+			path = MathMonsters_SplitVCTests;
+			sourceTree = "<group>";
+		};
+		B074710124BFFC870057B839 /* MathMonsters_SplitVCUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B074710224BFFC870057B839 /* MathMonsters_SplitVCUITests.m */,
+				B074710424BFFC870057B839 /* Info.plist */,
+			);
+			path = MathMonsters_SplitVCUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B07470D724BFFC860057B839 /* MathMonsters_SplitVC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B074710724BFFC870057B839 /* Build configuration list for PBXNativeTarget "MathMonsters_SplitVC" */;
+			buildPhases = (
+				B07470D424BFFC860057B839 /* Sources */,
+				B07470D524BFFC860057B839 /* Frameworks */,
+				B07470D624BFFC860057B839 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MathMonsters_SplitVC;
+			productName = MathMonsters_SplitVC;
+			productReference = B07470D824BFFC860057B839 /* MathMonsters_SplitVC.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B07470F224BFFC870057B839 /* MathMonsters_SplitVCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B074710A24BFFC870057B839 /* Build configuration list for PBXNativeTarget "MathMonsters_SplitVCTests" */;
+			buildPhases = (
+				B07470EF24BFFC870057B839 /* Sources */,
+				B07470F024BFFC870057B839 /* Frameworks */,
+				B07470F124BFFC870057B839 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B07470F524BFFC870057B839 /* PBXTargetDependency */,
+			);
+			name = MathMonsters_SplitVCTests;
+			productName = MathMonsters_SplitVCTests;
+			productReference = B07470F324BFFC870057B839 /* MathMonsters_SplitVCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B07470FD24BFFC870057B839 /* MathMonsters_SplitVCUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B074710D24BFFC870057B839 /* Build configuration list for PBXNativeTarget "MathMonsters_SplitVCUITests" */;
+			buildPhases = (
+				B07470FA24BFFC870057B839 /* Sources */,
+				B07470FB24BFFC870057B839 /* Frameworks */,
+				B07470FC24BFFC870057B839 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B074710024BFFC870057B839 /* PBXTargetDependency */,
+			);
+			name = MathMonsters_SplitVCUITests;
+			productName = MathMonsters_SplitVCUITests;
+			productReference = B07470FE24BFFC870057B839 /* MathMonsters_SplitVCUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B07470D024BFFC860057B839 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Quốc Tuyến";
+				TargetAttributes = {
+					B07470D724BFFC860057B839 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					B07470F224BFFC870057B839 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = B07470D724BFFC860057B839;
+					};
+					B07470FD24BFFC870057B839 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = B07470D724BFFC860057B839;
+					};
+				};
+			};
+			buildConfigurationList = B07470D324BFFC860057B839 /* Build configuration list for PBXProject "MathMonsters_SplitVC" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B07470CF24BFFC860057B839;
+			productRefGroup = B07470D924BFFC860057B839 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B07470D724BFFC860057B839 /* MathMonsters_SplitVC */,
+				B07470F224BFFC870057B839 /* MathMonsters_SplitVCTests */,
+				B07470FD24BFFC870057B839 /* MathMonsters_SplitVCUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B07470D624BFFC860057B839 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07470EB24BFFC870057B839 /* LaunchScreen.storyboard in Resources */,
+				B07470E824BFFC870057B839 /* Assets.xcassets in Resources */,
+				B07470E624BFFC860057B839 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07470F124BFFC870057B839 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07470FC24BFFC870057B839 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B07470D424BFFC860057B839 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07470E324BFFC860057B839 /* ViewController.m in Sources */,
+				B07470DD24BFFC860057B839 /* AppDelegate.m in Sources */,
+				B07470EE24BFFC870057B839 /* main.m in Sources */,
+				B07470E024BFFC860057B839 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07470EF24BFFC870057B839 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B07470F824BFFC870057B839 /* MathMonsters_SplitVCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B07470FA24BFFC870057B839 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B074710324BFFC870057B839 /* MathMonsters_SplitVCUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B07470F524BFFC870057B839 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B07470D724BFFC860057B839 /* MathMonsters_SplitVC */;
+			targetProxy = B07470F424BFFC870057B839 /* PBXContainerItemProxy */;
+		};
+		B074710024BFFC870057B839 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B07470D724BFFC860057B839 /* MathMonsters_SplitVC */;
+			targetProxy = B07470FF24BFFC870057B839 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B07470E424BFFC860057B839 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B07470E524BFFC860057B839 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B07470E924BFFC870057B839 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B07470EA24BFFC870057B839 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B074710524BFFC870057B839 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B074710624BFFC870057B839 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B074710824BFFC870057B839 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MathMonsters_SplitVC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tuyennq.MathMonsters-SplitVC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B074710924BFFC870057B839 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MathMonsters_SplitVC/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tuyennq.MathMonsters-SplitVC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B074710B24BFFC870057B839 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MathMonsters_SplitVCTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tuyennq.MathMonsters-SplitVCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathMonsters_SplitVC.app/MathMonsters_SplitVC";
+			};
+			name = Debug;
+		};
+		B074710C24BFFC870057B839 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MathMonsters_SplitVCTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tuyennq.MathMonsters-SplitVCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathMonsters_SplitVC.app/MathMonsters_SplitVC";
+			};
+			name = Release;
+		};
+		B074710E24BFFC870057B839 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MathMonsters_SplitVCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tuyennq.MathMonsters-SplitVCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MathMonsters_SplitVC;
+			};
+			name = Debug;
+		};
+		B074710F24BFFC870057B839 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MathMonsters_SplitVCUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tuyennq.MathMonsters-SplitVCUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MathMonsters_SplitVC;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B07470D324BFFC860057B839 /* Build configuration list for PBXProject "MathMonsters_SplitVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B074710524BFFC870057B839 /* Debug */,
+				B074710624BFFC870057B839 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B074710724BFFC870057B839 /* Build configuration list for PBXNativeTarget "MathMonsters_SplitVC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B074710824BFFC870057B839 /* Debug */,
+				B074710924BFFC870057B839 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B074710A24BFFC870057B839 /* Build configuration list for PBXNativeTarget "MathMonsters_SplitVCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B074710B24BFFC870057B839 /* Debug */,
+				B074710C24BFFC870057B839 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B074710D24BFFC870057B839 /* Build configuration list for PBXNativeTarget "MathMonsters_SplitVCUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B074710E24BFFC870057B839 /* Debug */,
+				B074710F24BFFC870057B839 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B07470D024BFFC860057B839 /* Project object */;
+}
