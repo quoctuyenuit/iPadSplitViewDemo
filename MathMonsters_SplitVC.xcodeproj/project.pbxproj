@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B02E1D7324C18E9500B41ACA /* MasterTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02E1D7224C18E9500B41ACA /* MasterTemplateViewController.m */; };
+		B02E1D7624C198A900B41ACA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02E1D7524C198A900B41ACA /* MasterViewController.m */; };
+		B03BA79E24C19C9200D0AA0A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03BA79D24C19C9200D0AA0A /* DetailViewController.m */; };
+		B03BA7A324C1A4E700D0AA0A /* DetailTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03BA7A224C1A4E700D0AA0A /* DetailTemplateViewController.m */; };
 		B07470DD24BFFC860057B839 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B07470DC24BFFC860057B839 /* AppDelegate.m */; };
 		B07470E024BFFC860057B839 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B07470DF24BFFC860057B839 /* SceneDelegate.m */; };
 		B07470E624BFFC860057B839 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07470E424BFFC860057B839 /* Main.storyboard */; };
@@ -16,7 +20,7 @@
 		B07470F824BFFC870057B839 /* MathMonsters_SplitVCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B07470F724BFFC870057B839 /* MathMonsters_SplitVCTests.m */; };
 		B074710324BFFC870057B839 /* MathMonsters_SplitVCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B074710224BFFC870057B839 /* MathMonsters_SplitVCUITests.m */; };
 		B074711224C001AC0057B839 /* MonsterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B074711124C001AC0057B839 /* MonsterListViewController.m */; };
-		B074711524C0036F0057B839 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B074711424C0036F0057B839 /* DetailViewController.m */; };
+		B074711524C0036F0057B839 /* MonsterDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B074711424C0036F0057B839 /* MonsterDetailViewController.m */; };
 		B074711824C004D30057B839 /* Monster.m in Sources */ = {isa = PBXBuildFile; fileRef = B074711724C004D30057B839 /* Monster.m */; };
 		B074711E24C007780057B839 /* MonsterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B074711D24C007780057B839 /* MonsterViewModel.m */; };
 		B074712124C007E50057B839 /* DataBinding.m in Sources */ = {isa = PBXBuildFile; fileRef = B074712024C007E50057B839 /* DataBinding.m */; };
@@ -42,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B02E1D7124C18E9500B41ACA /* MasterTemplateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterTemplateViewController.h; sourceTree = "<group>"; };
+		B02E1D7224C18E9500B41ACA /* MasterTemplateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterTemplateViewController.m; sourceTree = "<group>"; };
+		B02E1D7424C198A900B41ACA /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		B02E1D7524C198A900B41ACA /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		B03BA79C24C19C9200D0AA0A /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		B03BA79D24C19C9200D0AA0A /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B03BA7A124C1A4E700D0AA0A /* DetailTemplateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailTemplateViewController.h; sourceTree = "<group>"; };
+		B03BA7A224C1A4E700D0AA0A /* DetailTemplateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailTemplateViewController.m; sourceTree = "<group>"; };
 		B06DC24224C0127F00486E1B /* MonsterFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonsterFactory.h; sourceTree = "<group>"; };
 		B07470D824BFFC860057B839 /* MathMonsters_SplitVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMonsters_SplitVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07470DB24BFFC860057B839 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,8 +73,8 @@
 		B074710424BFFC870057B839 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B074711024C001AC0057B839 /* MonsterListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonsterListViewController.h; sourceTree = "<group>"; };
 		B074711124C001AC0057B839 /* MonsterListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonsterListViewController.m; sourceTree = "<group>"; };
-		B074711324C0036F0057B839 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		B074711424C0036F0057B839 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B074711324C0036F0057B839 /* MonsterDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonsterDetailViewController.h; sourceTree = "<group>"; };
+		B074711424C0036F0057B839 /* MonsterDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonsterDetailViewController.m; sourceTree = "<group>"; };
 		B074711624C004D30057B839 /* Monster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Monster.h; sourceTree = "<group>"; };
 		B074711724C004D30057B839 /* Monster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Monster.m; sourceTree = "<group>"; };
 		B074711C24C007780057B839 /* MonsterViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonsterViewModel.h; sourceTree = "<group>"; };
@@ -99,6 +111,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B03BA79F24C1A48100D0AA0A /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				B02E1D7124C18E9500B41ACA /* MasterTemplateViewController.h */,
+				B02E1D7224C18E9500B41ACA /* MasterTemplateViewController.m */,
+				B02E1D7424C198A900B41ACA /* MasterViewController.h */,
+				B02E1D7524C198A900B41ACA /* MasterViewController.m */,
+				B074711024C001AC0057B839 /* MonsterListViewController.h */,
+				B074711124C001AC0057B839 /* MonsterListViewController.m */,
+			);
+			path = Master;
+			sourceTree = "<group>";
+		};
+		B03BA7A024C1A49200D0AA0A /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B074711324C0036F0057B839 /* MonsterDetailViewController.h */,
+				B074711424C0036F0057B839 /* MonsterDetailViewController.m */,
+				B03BA79C24C19C9200D0AA0A /* DetailViewController.h */,
+				B03BA79D24C19C9200D0AA0A /* DetailViewController.m */,
+				B03BA7A124C1A4E700D0AA0A /* DetailTemplateViewController.h */,
+				B03BA7A224C1A4E700D0AA0A /* DetailTemplateViewController.m */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		B07470CF24BFFC860057B839 = {
 			isa = PBXGroup;
 			children = (
@@ -159,10 +197,8 @@
 		B074711924C0073D0057B839 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B074711024C001AC0057B839 /* MonsterListViewController.h */,
-				B074711124C001AC0057B839 /* MonsterListViewController.m */,
-				B074711324C0036F0057B839 /* DetailViewController.h */,
-				B074711424C0036F0057B839 /* DetailViewController.m */,
+				B03BA7A024C1A49200D0AA0A /* Detail */,
+				B03BA79F24C1A48100D0AA0A /* Master */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -331,12 +367,16 @@
 			files = (
 				B074711824C004D30057B839 /* Monster.m in Sources */,
 				B074711E24C007780057B839 /* MonsterViewModel.m in Sources */,
-				B074711524C0036F0057B839 /* DetailViewController.m in Sources */,
+				B02E1D7324C18E9500B41ACA /* MasterTemplateViewController.m in Sources */,
+				B074711524C0036F0057B839 /* MonsterDetailViewController.m in Sources */,
+				B02E1D7624C198A900B41ACA /* MasterViewController.m in Sources */,
 				B074711224C001AC0057B839 /* MonsterListViewController.m in Sources */,
 				B074712524C00A260057B839 /* MonsterViewEntity.m in Sources */,
 				B07470DD24BFFC860057B839 /* AppDelegate.m in Sources */,
 				B074712124C007E50057B839 /* DataBinding.m in Sources */,
+				B03BA79E24C19C9200D0AA0A /* DetailViewController.m in Sources */,
 				B074712824C00D210057B839 /* MonsterFactory.m in Sources */,
+				B03BA7A324C1A4E700D0AA0A /* DetailTemplateViewController.m in Sources */,
 				B07470EE24BFFC870057B839 /* main.m in Sources */,
 				B07470E024BFFC860057B839 /* SceneDelegate.m in Sources */,
 			);

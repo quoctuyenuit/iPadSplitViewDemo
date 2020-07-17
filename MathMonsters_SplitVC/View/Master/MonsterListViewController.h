@@ -8,17 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MonsterViewEntity.h"
+#import "MasterTemplateViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol MasterViewControllerDelegate;
-
 @interface MonsterListViewController : UITableViewController
-@property(nonatomic, weak) id<MasterViewControllerDelegate> delegate;
-@end
-
-@protocol MasterViewControllerDelegate <NSObject>
-- (void)masterViewController:(MonsterListViewController *)viewController monsterSelected:(MonsterViewEntity *)monster;
+@property(nonatomic, weak) id<MasterDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END

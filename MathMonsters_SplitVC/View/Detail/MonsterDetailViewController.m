@@ -6,7 +6,7 @@
 //  Copyright © 2020 Quốc Tuyến. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "MonsterDetailViewController.h"
 #import "MonsterListViewController.h"
 
 #define ICON_WIDTH                      90
@@ -17,7 +17,7 @@
 
 #define DEBUG_VIEW_MODE                 0
 
-@interface DetailViewController ()
+@interface MonsterDetailViewController ()
 @property (nonatomic) UILabel *nameLabel;
 @property (nonatomic) UILabel *descriptionLabel;
 @property (nonatomic) UILabel *killMonsterLabel;
@@ -29,7 +29,7 @@
 - (void)_layoutElements;
 @end
 
-@implementation DetailViewController
+@implementation MonsterDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -59,7 +59,6 @@
         _nameLabel.textAlignment = NSTextAlignmentLeft;
         _nameLabel.text = DEFAULT_MONSTER_NAME;
     }
-    
     return _nameLabel;
 }
 
@@ -163,10 +162,4 @@
     _iconImageView.image = _monster.icon;
     _weaponImageView.image = _monster.weaponIcon;
 }
-
-#pragma mark - MasterViewControllerDelegate methods
-- (void)masterViewController:(MonsterListViewController *)viewController monsterSelected:(MonsterViewEntity *)monster {
-    self.monster = monster;
-}
-
 @end

@@ -8,6 +8,9 @@
 
 #import "SceneDelegate.h"
 #import "MonsterListViewController.h"
+#import "MonsterDetailViewController.h"
+#import "MasterTemplateViewController.h"
+#import "MasterViewController.h"
 #import "DetailViewController.h"
 
 @interface SceneDelegate () <UISplitViewControllerDelegate>
@@ -23,28 +26,26 @@
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     
     UISplitViewController *splitViewController = [[UISplitViewController alloc] init];
+    splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
     
-    MonsterListViewController * monsterListVc   = [[MonsterListViewController alloc] init];
-    DetailViewController *      detailVc        = [[DetailViewController alloc] init];
+    MasterViewController * masterViewController = [[MasterViewController alloc] init];
+    DetailViewController * detailViewController = [[DetailViewController alloc] init];
     
-    monsterListVc.delegate = detailVc;
     
-    UINavigationController *masterNav = [[UINavigationController alloc] initWithRootViewController:monsterListVc];
-    UINavigationController *detailNav = [[UINavigationController alloc] initWithRootViewController:detailVc];
-    [masterNav setTitle:@"Monster List"];
+    UINavigationController *detailNav = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+//    [masterNav setTitle:@"Monster List"];
     
-    splitViewController.viewControllers = @[masterNav, detailNav];
+    splitViewController.viewControllers = @[masterViewController, detailNav];
     splitViewController.delegate = self;
-    detailVc.navigationItem.leftItemsSupplementBackButton = true;
-    detailVc.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
+    detailViewController.navigationItem.leftItemsSupplementBackButton = true;
+    detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     
     UIWindowScene * windowScene = (UIWindowScene *) scene;
     _window                     = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     _window.rootViewController  = splitViewController;
     [_window makeKeyAndVisible];
-    _window.windowScene = windowScene;
+    _window.windowScene = windowScene; 
 }
-
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.
@@ -79,15 +80,7 @@
 }
 
 - (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
-    
-    if ([secondaryViewController isKindOfClass:[UINavigationController class]] &&
-        [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[DetailViewController class]] &&
-        ([(DetailViewController *)[(UINavigationController *)secondaryViewController topViewController] monster] == nil)) {
-        // Return YES to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
-        return YES;
-    } else {
-        return NO;
-    }
+    return YES;
 }
 
 @end
