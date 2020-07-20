@@ -17,22 +17,28 @@
 @property(nonatomic) UIButton * showDetailButton;
 @property(nonatomic) UIView * contentView;
 @property(nonatomic, assign) NSString * masterTitle;
-
 - (void)_setupView;
 @end
 
 @implementation MasterTemplateViewController
+
+@synthesize delegate;
+
+@synthesize sender;
+
+@synthesize prefferedPushType;
+
 - (instancetype)initWithTitle:(NSString *)title {
     if (self = [super initWithNibName:nil bundle:nil]) {
         self.masterTitle = title;
         [self setTitle:[title stringByAppendingFormat:@" Master"]];
+        self.prefferedPushType = ViewControllerPushTypeReplaceCurrentDetail;
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     [self _setupView];
     self.view.backgroundColor = UIColor.whiteColor;
 
@@ -104,7 +110,7 @@
 
 - (void)showDetailAction:(id)sender {
     if (self.delegate && [self.delegate respondsToSelector:@selector(masterViewController:showDetail:)]) {
-        UIViewController * detailVc = [[DetailTemplateViewController alloc] initWithTitle:self.masterTitle];
+        UIViewController<NavigationElementProtocol> * detailVc = [[DetailTemplateViewController alloc] initWithTitle:self.masterTitle];
         detailVc.view.backgroundColor = self.view.backgroundColor;
         
         [self.delegate masterViewController:self showDetail:detailVc];

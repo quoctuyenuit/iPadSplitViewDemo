@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "MonsterViewEntity.h"
 #import "MonsterListViewController.h"
+#import "NavigationElementProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MonsterDetailViewController : UIViewController
+@interface MonsterDetailViewController : UIViewController <NavigationElementProtocol>
 
 @property(nonatomic) MonsterViewEntity * monster;
 

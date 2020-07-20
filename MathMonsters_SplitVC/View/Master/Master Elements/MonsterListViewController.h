@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "MonsterViewEntity.h"
 #import "MasterTemplateViewController.h"
+#import "MasterViewController.h"
+#import "NavigationElementProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MonsterListViewController : UITableViewController
-@property(nonatomic, weak) id<MasterDelegate> delegate;
+@interface MonsterListViewController : UITableViewController <MasterViewControllerProtocol, NavigationElementProtocol>
 @end
 
 NS_ASSUME_NONNULL_END

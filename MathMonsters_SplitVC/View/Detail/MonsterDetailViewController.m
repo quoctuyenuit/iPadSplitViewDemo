@@ -13,7 +13,7 @@
 #define WEAPON_ICON_WIDTH               50
 #define LABEL_MONSTER                   @"Preferred Way To Kill"
 #define DEFAULT_MONSTER_NAME            @"Monster Name"
-#define DEFAULT_MONSTER_DESCRIPTION     @"Description";
+#define DEFAULT_MONSTER_DESCRIPTION     @"Description"
 
 #define DEBUG_VIEW_MODE                 0
 
@@ -118,39 +118,39 @@
     [self.textBoundView addSubview:self.descriptionLabel];
     [self.textBoundView addSubview:self.killMonsterLabel];
     
-    self.textBoundView.translatesAutoresizingMaskIntoConstraints    = NO;
-    self.iconImageView.translatesAutoresizingMaskIntoConstraints    = NO;
-    self.weaponImageView.translatesAutoresizingMaskIntoConstraints  = NO;
-    self.nameLabel.translatesAutoresizingMaskIntoConstraints        = NO;
+    self.textBoundView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.iconImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.weaponImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.nameLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.descriptionLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.killMonsterLabel.translatesAutoresizingMaskIntoConstraints = NO;
     
-    [self.iconImageView.widthAnchor constraintEqualToConstant:ICON_WIDTH].active                            = YES;
-    [self.iconImageView.heightAnchor constraintEqualToAnchor:self.iconImageView.widthAnchor].active         = YES;
+    [self.iconImageView.widthAnchor constraintEqualToConstant:ICON_WIDTH].active = YES;
+    [self.iconImageView.heightAnchor constraintEqualToAnchor:self.iconImageView.widthAnchor].active = YES;
     [self.iconImageView.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor constant:-100].active = YES;
-    [self.iconImageView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active               = YES;
+    [self.iconImageView.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active = YES;
     
-    [self.weaponImageView.topAnchor constraintEqualToAnchor:self.textBoundView.bottomAnchor constant:8].active          = YES;
-    [self.weaponImageView.leadingAnchor constraintEqualToAnchor:self.iconImageView.trailingAnchor constant:8].active    = YES;
-    [self.weaponImageView.widthAnchor constraintEqualToConstant:WEAPON_ICON_WIDTH].active                               = YES;
-    [self.weaponImageView.heightAnchor constraintEqualToAnchor:self.weaponImageView.widthAnchor].active                 = YES;
+    [self.weaponImageView.topAnchor constraintEqualToAnchor:self.textBoundView.bottomAnchor constant:8].active = YES;
+    [self.weaponImageView.leadingAnchor constraintEqualToAnchor:self.iconImageView.trailingAnchor constant:8].active = YES;
+    [self.weaponImageView.widthAnchor constraintEqualToConstant:WEAPON_ICON_WIDTH].active = YES;
+    [self.weaponImageView.heightAnchor constraintEqualToAnchor:self.weaponImageView.widthAnchor].active = YES;
     
-    [self.textBoundView.topAnchor constraintEqualToAnchor:self.iconImageView.topAnchor].active                          = YES;
-    [self.textBoundView.leadingAnchor constraintEqualToAnchor:self.iconImageView.trailingAnchor constant:8].active      = YES;
-    [self.textBoundView.trailingAnchor constraintLessThanOrEqualToAnchor:self.view.trailingAnchor constant:-10].active  = YES;
+    [self.textBoundView.topAnchor constraintEqualToAnchor:self.iconImageView.topAnchor].active = YES;
+    [self.textBoundView.leadingAnchor constraintEqualToAnchor:self.iconImageView.trailingAnchor constant:8].active = YES;
+    [self.textBoundView.trailingAnchor constraintLessThanOrEqualToAnchor:self.view.trailingAnchor constant:-10].active = YES;
     
-    [self.nameLabel.leadingAnchor constraintEqualToAnchor:self.textBoundView.leadingAnchor].active      = YES;
-    [self.nameLabel.topAnchor constraintEqualToAnchor:self.textBoundView.topAnchor].active              = YES;
-    [self.nameLabel.trailingAnchor constraintEqualToAnchor:self.textBoundView.trailingAnchor].active    = YES;
+    [self.nameLabel.leadingAnchor constraintEqualToAnchor:self.textBoundView.leadingAnchor].active = YES;
+    [self.nameLabel.topAnchor constraintEqualToAnchor:self.textBoundView.topAnchor].active = YES;
+    [self.nameLabel.trailingAnchor constraintEqualToAnchor:self.textBoundView.trailingAnchor].active = YES;
     
-    [self.descriptionLabel.leadingAnchor constraintEqualToAnchor:self.textBoundView.leadingAnchor].active       = YES;
-    [self.descriptionLabel.topAnchor constraintEqualToAnchor:self.nameLabel.bottomAnchor constant:15].active    = YES;
-    [self.descriptionLabel.trailingAnchor constraintEqualToAnchor:self.textBoundView.trailingAnchor].active     = YES;
+    [self.descriptionLabel.leadingAnchor constraintEqualToAnchor:self.textBoundView.leadingAnchor].active = YES;
+    [self.descriptionLabel.topAnchor constraintEqualToAnchor:self.nameLabel.bottomAnchor constant:15].active = YES;
+    [self.descriptionLabel.trailingAnchor constraintEqualToAnchor:self.textBoundView.trailingAnchor].active = YES;
 
-    [self.killMonsterLabel.leadingAnchor constraintEqualToAnchor:self.textBoundView.leadingAnchor].active           = YES;
-    [self.killMonsterLabel.topAnchor constraintEqualToAnchor:self.descriptionLabel.bottomAnchor constant:8].active  = YES;
-    [self.killMonsterLabel.trailingAnchor constraintEqualToAnchor:self.textBoundView.trailingAnchor].active         = YES;
-    [self.killMonsterLabel.bottomAnchor constraintEqualToAnchor:self.textBoundView.bottomAnchor].active             = YES;
+    [self.killMonsterLabel.leadingAnchor constraintEqualToAnchor:self.textBoundView.leadingAnchor].active = YES;
+    [self.killMonsterLabel.topAnchor constraintEqualToAnchor:self.descriptionLabel.bottomAnchor constant:8].active = YES;
+    [self.killMonsterLabel.trailingAnchor constraintEqualToAnchor:self.textBoundView.trailingAnchor].active = YES;
+    [self.killMonsterLabel.bottomAnchor constraintEqualToAnchor:self.textBoundView.bottomAnchor].active = YES;
 }
 
 - (void)_configureView {
@@ -162,4 +162,9 @@
     _iconImageView.image = _monster.icon;
     _weaponImageView.image = _monster.weaponIcon;
 }
+
+@synthesize prefferedPushType;
+
+@synthesize sender;
+
 @end

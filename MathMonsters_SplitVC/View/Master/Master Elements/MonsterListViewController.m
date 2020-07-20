@@ -12,8 +12,8 @@
 #import "MonsterDetailViewController.h"
 
 #define CELL_REUSEIDENTIFIER    @"Monster Cell"
-
-#define NUMBER_OF_MONSTER   20
+#define SELF_TITLE              @"Monster List"
+#define NUMBER_OF_MONSTER       20
 
 @interface MonsterListViewController ()
 @property(nonatomic) MonsterViewModel * viewModel;
@@ -22,11 +22,18 @@
 
 @implementation MonsterListViewController
 
+@synthesize delegate;
+
+@synthesize sender;
+
+@synthesize prefferedPushType;
+
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        [self setTitle:@"Monster List"];
+        [self setTitle:SELF_TITLE];
+        self.prefferedPushType = ViewControllerPushTypeReplaceCurrentDetail;
     }
     return self;
 }
@@ -78,7 +85,6 @@
         MonsterViewEntity * monster = [_viewModel monsterAtIndexPath:indexPath];
         _detailMonsterViewController.monster = monster;
         [self.delegate masterViewController:self showDetail:_detailMonsterViewController];
-        
     }
 }
 

@@ -9,6 +9,7 @@
 #import "EmptyDetailViewController.h"
 
 #define TEXT_DEFAULT    @"Detail ViewController"
+#define SELF_TITLE      @"Detail"
 
 @interface EmptyDetailViewController ()
 @property(nonatomic) UILabel * label;
@@ -19,8 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setTitle:@"Detail"];
-    // Do any additional setup after loading the view.
+    [self setTitle:SELF_TITLE];
     [self setupView];
 }
 

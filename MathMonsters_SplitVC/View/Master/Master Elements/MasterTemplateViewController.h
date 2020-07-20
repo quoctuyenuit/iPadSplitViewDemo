@@ -1,5 +1,5 @@
 //
-//  DetailTemplateViewController.h
+//  MasterTemplateViewController.h
 //  MathMonsters_SplitVC
 //
 //  Created by Quốc Tuyến on 7/17/20.
@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NavigationElementProtocol.h"
+#import "MasterViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DetailTemplateViewController : UIViewController <NavigationElementProtocol>
+@interface MasterTemplateViewController : UIViewController <MasterViewControllerProtocol, NavigationElementProtocol>
 - (instancetype)initWithTitle:(NSString *)title;
 @end
 

@@ -16,8 +16,9 @@ typedef NS_ENUM(NSUInteger, ViewControllerPushType) {
     ViewControllerPushTypePushCurrentMaster,
 };
 
-@interface NavigationElementProtocol : NSObject
-@property(nonatomic) id sender;
+@protocol NavigationElementProtocol <NSObject>
+@property(nonatomic) UIViewController<NavigationElementProtocol> * sender;
+@property(nonatomic) ViewControllerPushType prefferedPushType;
 @end
 
 NS_ASSUME_NONNULL_END

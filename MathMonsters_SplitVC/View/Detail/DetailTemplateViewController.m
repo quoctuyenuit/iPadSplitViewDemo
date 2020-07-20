@@ -15,6 +15,10 @@
 
 @implementation DetailTemplateViewController
 
+@synthesize sender;
+
+@synthesize prefferedPushType;
+
 - (instancetype)initWithTitle:(NSString *)title {
     if (self = [super initWithNibName:nil bundle:nil]) {
         [self setTitle:[title stringByAppendingFormat:@" Detail"]];
@@ -25,7 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     [self setupView];
 }
 
