@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		B02E1D7324C18E9500B41ACA /* MasterTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02E1D7224C18E9500B41ACA /* MasterTemplateViewController.m */; };
 		B02E1D7624C198A900B41ACA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B02E1D7524C198A900B41ACA /* MasterViewController.m */; };
-		B03BA79E24C19C9200D0AA0A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03BA79D24C19C9200D0AA0A /* DetailViewController.m */; };
+		B03BA79E24C19C9200D0AA0A /* EmptyDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03BA79D24C19C9200D0AA0A /* EmptyDetailViewController.m */; };
 		B03BA7A324C1A4E700D0AA0A /* DetailTemplateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B03BA7A224C1A4E700D0AA0A /* DetailTemplateViewController.m */; };
+		B0600E4324C53C910079BA96 /* NavigationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0600E4224C53C910079BA96 /* NavigationManager.m */; };
 		B07470DD24BFFC860057B839 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B07470DC24BFFC860057B839 /* AppDelegate.m */; };
 		B07470E024BFFC860057B839 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B07470DF24BFFC860057B839 /* SceneDelegate.m */; };
 		B07470E624BFFC860057B839 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B07470E424BFFC860057B839 /* Main.storyboard */; };
@@ -50,10 +51,13 @@
 		B02E1D7224C18E9500B41ACA /* MasterTemplateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterTemplateViewController.m; sourceTree = "<group>"; };
 		B02E1D7424C198A900B41ACA /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		B02E1D7524C198A900B41ACA /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		B03BA79C24C19C9200D0AA0A /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		B03BA79D24C19C9200D0AA0A /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		B03BA79C24C19C9200D0AA0A /* EmptyDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyDetailViewController.h; sourceTree = "<group>"; };
+		B03BA79D24C19C9200D0AA0A /* EmptyDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyDetailViewController.m; sourceTree = "<group>"; };
 		B03BA7A124C1A4E700D0AA0A /* DetailTemplateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailTemplateViewController.h; sourceTree = "<group>"; };
 		B03BA7A224C1A4E700D0AA0A /* DetailTemplateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailTemplateViewController.m; sourceTree = "<group>"; };
+		B0600E4124C53C910079BA96 /* NavigationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationManager.h; sourceTree = "<group>"; };
+		B0600E4224C53C910079BA96 /* NavigationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationManager.m; sourceTree = "<group>"; };
+		B0600E4524C53E980079BA96 /* NavigationElementProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationElementProtocol.h; sourceTree = "<group>"; };
 		B06DC24224C0127F00486E1B /* MonsterFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MonsterFactory.h; sourceTree = "<group>"; };
 		B07470D824BFFC860057B839 /* MathMonsters_SplitVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMonsters_SplitVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07470DB24BFFC860057B839 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,12 +133,22 @@
 			children = (
 				B074711324C0036F0057B839 /* MonsterDetailViewController.h */,
 				B074711424C0036F0057B839 /* MonsterDetailViewController.m */,
-				B03BA79C24C19C9200D0AA0A /* DetailViewController.h */,
-				B03BA79D24C19C9200D0AA0A /* DetailViewController.m */,
+				B03BA79C24C19C9200D0AA0A /* EmptyDetailViewController.h */,
+				B03BA79D24C19C9200D0AA0A /* EmptyDetailViewController.m */,
 				B03BA7A124C1A4E700D0AA0A /* DetailTemplateViewController.h */,
 				B03BA7A224C1A4E700D0AA0A /* DetailTemplateViewController.m */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		B0600E4424C53E5F0079BA96 /* Navigation Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B0600E4124C53C910079BA96 /* NavigationManager.h */,
+				B0600E4224C53C910079BA96 /* NavigationManager.m */,
+				B0600E4524C53E980079BA96 /* NavigationElementProtocol.h */,
+			);
+			path = "Navigation Manager";
 			sourceTree = "<group>";
 		};
 		B07470CF24BFFC860057B839 = {
@@ -197,6 +211,7 @@
 		B074711924C0073D0057B839 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B0600E4424C53E5F0079BA96 /* Navigation Manager */,
 				B03BA7A024C1A49200D0AA0A /* Detail */,
 				B03BA79F24C1A48100D0AA0A /* Master */,
 			);
@@ -374,10 +389,11 @@
 				B074712524C00A260057B839 /* MonsterViewEntity.m in Sources */,
 				B07470DD24BFFC860057B839 /* AppDelegate.m in Sources */,
 				B074712124C007E50057B839 /* DataBinding.m in Sources */,
-				B03BA79E24C19C9200D0AA0A /* DetailViewController.m in Sources */,
+				B03BA79E24C19C9200D0AA0A /* EmptyDetailViewController.m in Sources */,
 				B074712824C00D210057B839 /* MonsterFactory.m in Sources */,
 				B03BA7A324C1A4E700D0AA0A /* DetailTemplateViewController.m in Sources */,
 				B07470EE24BFFC870057B839 /* main.m in Sources */,
+				B0600E4324C53C910079BA96 /* NavigationManager.m in Sources */,
 				B07470E024BFFC860057B839 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

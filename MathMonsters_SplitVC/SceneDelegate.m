@@ -11,7 +11,7 @@
 #import "MonsterDetailViewController.h"
 #import "MasterTemplateViewController.h"
 #import "MasterViewController.h"
-#import "DetailViewController.h"
+#import "EmptyDetailViewController.h"
 
 @interface SceneDelegate () <UISplitViewControllerDelegate>
 
@@ -29,7 +29,7 @@
     splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
     
     MasterViewController * masterViewController = [[MasterViewController alloc] init];
-    DetailViewController * detailViewController = [[DetailViewController alloc] init];
+    EmptyDetailViewController * detailViewController = [[EmptyDetailViewController alloc] init];
     
     
     UINavigationController *detailNav = [[UINavigationController alloc] initWithRootViewController:detailViewController];
@@ -79,8 +79,8 @@
     // to restore the scene back to its current state.
 }
 
-- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
-    return YES;
-}
+//- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
+//    return YES;
+//}
 
 @end

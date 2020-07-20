@@ -9,10 +9,10 @@
 #import "MasterViewController.h"
 #import "MasterTemplateViewController.h"
 #import "MonsterListViewController.h"
+#import "EmptyDetailViewController.h"
 
 @interface MasterViewController () <MasterDelegate, UISplitViewControllerDelegate, UITabBarControllerDelegate>
 @property(nonatomic) UITabBarController * tabbarController;
-@property(nonatomic) UIViewController * detailController;
 @end
 
 @implementation MasterViewController
@@ -22,17 +22,10 @@
     // Do any additional setup after loading the view.
     [self setupView];
     [self.navigationController.navigationBar setHidden:YES];
-    
-    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(orientationDidChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
-- (void)orientationDidChanged:(NSNotification *)notification {
-    if (self.detailController && UIDeviceOrientationIsLandscape(UIDevice.currentDevice.orientation)) {
-        UINavigationController * detailNav = [[UINavigationController alloc] initWithRootViewController:self.detailController];
-        self.splitViewController.viewControllers = @[self, detailNav];
-        self.detailController.navigationItem.leftItemsSupplementBackButton = true;
-        self.detailController.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-    }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 - (void)setupView {
@@ -77,7 +70,6 @@
 - (void)masterViewController:(nonnull UIViewController *)templateViewController showDetail:(nonnull UIViewController *)detailViewController {
     if (self.splitViewController.viewControllers.count == 1) {
         [templateViewController.navigationController pushViewController:detailViewController animated:YES];
-        self.detailController = detailViewController;
     } else {
         UINavigationController * detailNav = [[UINavigationController alloc] initWithRootViewController:detailViewController];
         [self.splitViewController showDetailViewController:detailNav sender:templateViewController];
@@ -86,25 +78,39 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (UIViewController *)separateSecondaryViewControllerForSplitViewController:(UISplitViewController *)splitViewController {
+    UINavigationController *currentTab = (UINavigationController *)self.tabbarController.selectedViewController;
+    NSMutableArray * detailViewControllers = [NSMutableArray array];
+    
+    NSInteger i = 1;
+    while (i < currentTab.viewControllers.count) {
+        [detailViewControllers addObject:currentTab.viewControllers[i++]];
+    }
+    [currentTab popToRootViewControllerAnimated:NO];
+    if (detailViewControllers.count == 0) {
+        UIViewController * emptyDetail = [[EmptyDetailViewController alloc] init];
+        emptyDetail.navigationItem.leftItemsSupplementBackButton = YES;
+        emptyDetail.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
+        return [[UINavigationController alloc] initWithRootViewController: emptyDetail];
+    }
+    
+    UINavigationController * detailNavi = [[UINavigationController alloc] init];
+    for (UIViewController * vc in detailViewControllers) {
+        [detailNavi pushViewController:vc animated:NO];
+    }
+    return detailNavi;
 }
 
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    [self popAllNavigation];
-}
-
-- (void)popAllNavigation {
-    for (UINavigationController * nav in self.tabbarController.viewControllers) {
-        while (nav.viewControllers.count > 1) {
-            [nav popViewControllerAnimated:NO];
+- (void)collapseSecondaryViewController:(UIViewController *)secondaryViewController forSplitViewController:(UISplitViewController *)splitViewController {
+    UINavigationController * currentTab = (UINavigationController *)self.tabbarController.selectedViewController;
+    if (currentTab != nil) {
+        UINavigationController * detailNavi = (UINavigationController *)secondaryViewController;
+        UIViewController * detailVc = detailNavi.topViewController;
+        if ([detailVc isKindOfClass:[EmptyDetailViewController class]]) return;
+        
+        while (detailNavi.viewControllers.count > 0) {
+            [currentTab pushViewController: [detailNavi.viewControllers objectAtIndex:0] animated:NO];
         }
     }
 }
-
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
-    self.detailController = nil;
-}
-
 @end

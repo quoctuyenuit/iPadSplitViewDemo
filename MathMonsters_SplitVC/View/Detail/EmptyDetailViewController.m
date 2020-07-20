@@ -6,16 +6,16 @@
 //  Copyright © 2020 Quốc Tuyến. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "EmptyDetailViewController.h"
 
 #define TEXT_DEFAULT    @"Detail ViewController"
 
-@interface DetailViewController ()
+@interface EmptyDetailViewController ()
 @property(nonatomic) UILabel * label;
 @property(nonatomic) UIViewController * currentDetail;
 @end
 
-@implementation DetailViewController
+@implementation EmptyDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
