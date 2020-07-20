@@ -7,6 +7,7 @@
 //
 
 #import "DetailTemplateViewController.h"
+#import "NavigationManager.h"
 
 @interface DetailTemplateViewController ()
 @property(nonatomic) UIButton * pushButton;
@@ -19,10 +20,14 @@
 
 @synthesize prefferedPushType;
 
+@synthesize splitType;
+
 - (instancetype)initWithTitle:(NSString *)title {
     if (self = [super initWithNibName:nil bundle:nil]) {
         [self setTitle:[title stringByAppendingFormat:@" Detail"]];
         [self.navigationController.navigationBar setHidden:NO];
+        self.splitType = SplitViewControllerTypeDetail;
+        self.prefferedPushType = ViewControllerPushTypePushCurrentDetail;
     }
     return self;
 }
@@ -53,9 +58,10 @@
 }
 
 - (void)pushAction:(id)sender {
-    UIViewController * viewController = [[DetailTemplateViewController alloc] initWithTitle:self.title];
+    DetailTemplateViewController * viewController = [[DetailTemplateViewController alloc] initWithTitle:self.title];
     viewController.view.backgroundColor = self.view.backgroundColor;
-    [self.navigationController pushViewController:viewController animated:YES];
+    viewController.sender = self;
+    [[NavigationManager navigator] pushViewController:viewController animated:YES];
 }
 
 @end

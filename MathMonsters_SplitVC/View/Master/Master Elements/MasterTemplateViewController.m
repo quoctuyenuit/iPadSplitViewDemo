@@ -9,6 +9,7 @@
 #import "MasterTemplateViewController.h"
 #import "DetailTemplateViewController.h"
 #import "MasterViewController.h"
+#import "NavigationManager.h"
 
 #define DEBUG_VIEW_MODE     0
 
@@ -16,7 +17,8 @@
 @property(nonatomic) UIButton * pushButton;
 @property(nonatomic) UIButton * showDetailButton;
 @property(nonatomic) UIView * contentView;
-@property(nonatomic, assign) NSString * masterTitle;
+@property(nonatomic) NSString * masterTitle;
+@property(nonatomic) int index;
 - (void)_setupView;
 @end
 
@@ -28,11 +30,15 @@
 
 @synthesize prefferedPushType;
 
-- (instancetype)initWithTitle:(NSString *)title {
+@synthesize splitType;
+
+- (instancetype)initWithTitle:(NSString *)title withIndex:(int)index {
     if (self = [super initWithNibName:nil bundle:nil]) {
         self.masterTitle = title;
-        [self setTitle:[title stringByAppendingFormat:@" Master"]];
+        self.index = index;
+        [self setTitle:[title stringByAppendingFormat:@" %d", self.index]];
         self.prefferedPushType = ViewControllerPushTypeReplaceCurrentDetail;
+        self.splitType = SplitViewControllerTypeMaster;
     }
     return self;
 }
@@ -103,14 +109,16 @@
 }
 
 - (void)pushAction:(id)sender {
-    UIViewController * viewController = [[MasterTemplateViewController alloc] initWithTitle:self.masterTitle];
+    MasterTemplateViewController * viewController = [[MasterTemplateViewController alloc] initWithTitle:self.masterTitle
+                                                                                              withIndex:self.index + 1];
+    viewController.delegate = self.delegate;
     viewController.view.backgroundColor = self.view.backgroundColor;
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)showDetailAction:(id)sender {
     if (self.delegate && [self.delegate respondsToSelector:@selector(masterViewController:showDetail:)]) {
-        UIViewController<NavigationElementProtocol> * detailVc = [[DetailTemplateViewController alloc] initWithTitle:self.masterTitle];
+        UIViewController<NavigationElementProtocol> * detailVc = [[DetailTemplateViewController alloc] initWithTitle:self.title];
         detailVc.view.backgroundColor = self.view.backgroundColor;
         
         [self.delegate masterViewController:self showDetail:detailVc];

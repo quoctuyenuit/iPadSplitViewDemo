@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "MasterViewController.h"
+#import "NavigationElementProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EmptyDetailViewController : UIViewController
+@interface EmptyDetailViewController : UIViewController <NavigationElementProtocol>
 
 @end
 

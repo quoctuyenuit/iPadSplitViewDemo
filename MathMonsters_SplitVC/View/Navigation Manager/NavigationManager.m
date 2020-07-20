@@ -61,6 +61,8 @@
                 } else if (![detailNav isKindOfClass: [UINavigationController class]]) {
                     detailNav = [[UINavigationController alloc] initWithRootViewController:self.splitViewController.viewControllers.lastObject];
                     [detailNav pushViewController:viewController animated:animated];
+                } else {
+                    [detailNav pushViewController:viewController animated:animated];
                 }
                 [self.splitViewController showDetailViewController:detailNav sender:viewController.sender];
                 break;
@@ -73,8 +75,8 @@
     }
 }
 
-- (void)popViewController:(BOOL)animated {
-    [self.detailNavigationController popViewControllerAnimated:animated];
+- (UIViewController *)popViewController:(BOOL)animated {
+    return [self.detailNavigationController popViewControllerAnimated:animated];
 }
 
 - (void)presentViewController:(UIViewController<NavigationElementProtocol> *)viewControllerToPresent

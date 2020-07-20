@@ -32,9 +32,9 @@
 
 - (void)setupView {
     _tabbarController = [[UITabBarController alloc] init];
-    UIViewController<MasterViewControllerProtocol> * tab1 = [[MasterTemplateViewController alloc] initWithTitle:@"Tab1"];
-    UIViewController<MasterViewControllerProtocol> * tab2 = [[MasterTemplateViewController alloc] initWithTitle:@"Tab2"];
-    UIViewController<MasterViewControllerProtocol> * tab3 = [[MasterTemplateViewController alloc] initWithTitle:@"Tab3"];
+    UIViewController<MasterViewControllerProtocol> * tab1 = [[MasterTemplateViewController alloc] initWithTitle:@"Tab1 Master" withIndex:1];
+    UIViewController<MasterViewControllerProtocol> * tab2 = [[MasterTemplateViewController alloc] initWithTitle:@"Tab2 Master" withIndex:1];
+    UIViewController<MasterViewControllerProtocol> * tab3 = [[MasterTemplateViewController alloc] initWithTitle:@"Tab3 Master" withIndex:1];
     UIViewController<MasterViewControllerProtocol> * tab4 = [[MonsterListViewController alloc] init];
     
     tab1.delegate = self;
@@ -81,24 +81,23 @@
     UINavigationController *currentTab = (UINavigationController *)self.tabbarController.selectedViewController;
     /**
      * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-     * If current tab dont have detail or this tab dont want to present detail on split => return empty detail viewcontroller.
-     * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-     */
-    if (currentTab.viewControllers.count == 1 ||
-        ((id<NavigationElementProtocol>)currentTab.viewControllers.firstObject).prefferedPushType == ViewControllerPushTypePushCurrentMaster) {
-        UIViewController * emptyDetail = [[EmptyDetailViewController alloc] init];
-        emptyDetail.navigationItem.leftItemsSupplementBackButton = YES;
-        emptyDetail.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
-        return [[UINavigationController alloc] initWithRootViewController: emptyDetail];
-    }
-    /**
-     * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
      * Get all detail ViewControllers to push in split detail NavigationController
      * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
      */
     NSMutableArray * detailViewControllers = [NSMutableArray array];
-    while (currentTab.viewControllers.count > 1) {
+    while (currentTab.viewControllers.count > 1 && ((UIViewController<NavigationElementProtocol> *)currentTab.topViewController).splitType == SplitViewControllerTypeDetail) {
         [detailViewControllers addObject:[currentTab popViewControllerAnimated:NO]];
+    }
+    /**
+     * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+     * If current tab dont have any detail or dont want to present detail in split ==> show empty viewcontroller
+     * ----------------------------------------------------------------------------------------------------------------------------------------------------------------
+     */
+    if (detailViewControllers.count == 0) {
+        UIViewController * emptyDetail = [[EmptyDetailViewController alloc] init];
+        emptyDetail.navigationItem.leftItemsSupplementBackButton = YES;
+        emptyDetail.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
+        return [[UINavigationController alloc] initWithRootViewController: emptyDetail];
     }
     
     UINavigationController * detailNavi = [[UINavigationController alloc] init];
@@ -114,15 +113,20 @@
 - (void)collapseSecondaryViewController:(UIViewController *)secondaryViewController
                  forSplitViewController:(UISplitViewController *)splitViewController {
     
-    UINavigationController * currentTab = (UINavigationController *)self.tabbarController.selectedViewController;
-    if (currentTab != nil) {
-        UINavigationController * detailNavi = (UINavigationController *)secondaryViewController;
-        if ([detailNavi.topViewController isKindOfClass:[EmptyDetailViewController class]]) return;
-        
-        while (detailNavi.viewControllers.count > 0) {
-            [currentTab pushViewController: [detailNavi.viewControllers objectAtIndex:0] animated:NO];
-        }
-    }
+     UINavigationController * currentTab = (UINavigationController *)self.tabbarController.selectedViewController;
+       if (currentTab != nil) {
+           UINavigationController * detailNavi = (UINavigationController *)secondaryViewController;
+           if ([detailNavi.topViewController isKindOfClass:[EmptyDetailViewController class]]) return;
+           
+           UIViewController<NavigationElementProtocol> * currentMaster = (UIViewController<NavigationElementProtocol> *)currentTab.topViewController;
+           UIViewController<NavigationElementProtocol> * rootDetail = (UIViewController<NavigationElementProtocol> *)detailNavi.viewControllers.firstObject;
+           
+           if (rootDetail.sender == currentMaster) {
+               while (detailNavi.viewControllers.count > 0) {
+                   [currentTab pushViewController: [detailNavi.viewControllers objectAtIndex:0] animated:NO];
+               }
+           }
+       }
 }
 
 #pragma mark - NavigationManagerDelegate methods

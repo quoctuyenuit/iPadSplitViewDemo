@@ -31,6 +31,11 @@
 
 @implementation MonsterDetailViewController
 
+- (void)loadView {
+    [super loadView];
+    self.splitType = SplitViewControllerTypeDetail;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
@@ -166,5 +171,7 @@
 @synthesize prefferedPushType;
 
 @synthesize sender;
+
+@synthesize splitType;
 
 @end

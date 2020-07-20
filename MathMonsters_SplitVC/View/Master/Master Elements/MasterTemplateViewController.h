@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MasterTemplateViewController : UIViewController <MasterViewControllerProtocol, NavigationElementProtocol>
-- (instancetype)initWithTitle:(NSString *)title;
+- (instancetype)initWithTitle:(NSString *)title withIndex:(int)index;
 @end
 
 NS_ASSUME_NONNULL_END

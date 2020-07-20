@@ -16,8 +16,14 @@ typedef NS_ENUM(NSUInteger, ViewControllerPushType) {
     ViewControllerPushTypePushCurrentMaster,
 };
 
+typedef NS_ENUM(NSUInteger, SplitViewControllerType) {
+    SplitViewControllerTypeMaster,
+    SplitViewControllerTypeDetail
+};
+
 @protocol NavigationElementProtocol <NSObject>
 @property(nonatomic) UIViewController<NavigationElementProtocol> * sender;
+@property(nonatomic) SplitViewControllerType splitType;
 @property(nonatomic) ViewControllerPushType prefferedPushType;
 @end
 

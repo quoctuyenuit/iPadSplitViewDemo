@@ -28,12 +28,15 @@
 
 @synthesize prefferedPushType;
 
+@synthesize splitType;
+
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         [self setTitle:SELF_TITLE];
         self.prefferedPushType = ViewControllerPushTypeReplaceCurrentDetail;
+        self.splitType = SplitViewControllerTypeMaster;
     }
     return self;
 }

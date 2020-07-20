@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)navigator;
 - (void)pushViewController:(UIViewController<NavigationElementProtocol> *)viewController
                   animated:(BOOL)animated;
-- (void)popViewController:(BOOL)animated;
+- (UIViewController *)popViewController:(BOOL)animated;
 - (void)presentViewController:(UIViewController<NavigationElementProtocol> *)viewControllerToPresent
                      animated:(BOOL)animated
                    completion:(void (^ _Nullable)(void))completion;

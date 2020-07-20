@@ -18,6 +18,17 @@
 
 @implementation EmptyDetailViewController
 
+@synthesize sender;
+
+@synthesize prefferedPushType;
+
+@synthesize splitType;
+
+- (void)loadView {
+    [super loadView];
+    self.splitType = SplitViewControllerTypeDetail;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:SELF_TITLE];
