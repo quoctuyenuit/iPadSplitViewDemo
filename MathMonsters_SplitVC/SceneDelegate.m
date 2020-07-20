@@ -13,7 +13,7 @@
 #import "MasterViewController.h"
 #import "EmptyDetailViewController.h"
 
-@interface SceneDelegate () <UISplitViewControllerDelegate>
+@interface SceneDelegate ()
 
 @end
 
@@ -28,15 +28,11 @@
     UISplitViewController *splitViewController = [[UISplitViewController alloc] init];
     splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
     
-    MasterViewController * masterViewController = [[MasterViewController alloc] init];
-    EmptyDetailViewController * detailViewController = [[EmptyDetailViewController alloc] init];
-    
-    
+    UIViewController * masterViewController = [[MasterViewController alloc] init];
+    UIViewController * detailViewController = [[EmptyDetailViewController alloc] init];
     UINavigationController *detailNav = [[UINavigationController alloc] initWithRootViewController:detailViewController];
-//    [masterNav setTitle:@"Monster List"];
     
     splitViewController.viewControllers = @[masterViewController, detailNav];
-    splitViewController.delegate = self;
     detailViewController.navigationItem.leftItemsSupplementBackButton = true;
     detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     
@@ -78,9 +74,5 @@
     // Use this method to save data, release shared resources, and store enough scene-specific state information
     // to restore the scene back to its current state.
 }
-
-//- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *)primaryViewController {
-//    return YES;
-//}
 
 @end

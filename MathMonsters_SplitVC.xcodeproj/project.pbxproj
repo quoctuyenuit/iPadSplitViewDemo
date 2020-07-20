@@ -118,10 +118,10 @@
 		B03BA79F24C1A48100D0AA0A /* Master */ = {
 			isa = PBXGroup;
 			children = (
-				B02E1D7124C18E9500B41ACA /* MasterTemplateViewController.h */,
-				B02E1D7224C18E9500B41ACA /* MasterTemplateViewController.m */,
 				B02E1D7424C198A900B41ACA /* MasterViewController.h */,
 				B02E1D7524C198A900B41ACA /* MasterViewController.m */,
+				B02E1D7124C18E9500B41ACA /* MasterTemplateViewController.h */,
+				B02E1D7224C18E9500B41ACA /* MasterTemplateViewController.m */,
 				B074711024C001AC0057B839 /* MonsterListViewController.h */,
 				B074711124C001AC0057B839 /* MonsterListViewController.m */,
 			);
@@ -211,9 +211,9 @@
 		B074711924C0073D0057B839 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B0600E4424C53E5F0079BA96 /* Navigation Manager */,
-				B03BA7A024C1A49200D0AA0A /* Detail */,
 				B03BA79F24C1A48100D0AA0A /* Master */,
+				B03BA7A024C1A49200D0AA0A /* Detail */,
+				B0600E4424C53E5F0079BA96 /* Navigation Manager */,
 			);
 			path = View;
 			sourceTree = "<group>";
